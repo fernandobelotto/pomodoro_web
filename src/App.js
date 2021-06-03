@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { Button, Heading, Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react"
 
+import Timer from "./Timer";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Flex align="center" justify="center" h="100vh" flexDirection="column">
+      <Heading size="4xl">Pomodoro Web</Heading>
+      <Tabs>
+        <TabList>
+          <Tab>Work</Tab>
+          <Tab>Short Break</Tab>
+
+        </TabList>
+
+        <TabPanels>
+          <TabPanel>
+            <Timer initialMinute="25" initialSeconds="1" />
+
+          </TabPanel>
+          <TabPanel>
+            <Timer initialMinute="5" initialSeconds="1" />
+
+          </TabPanel>
+        </TabPanels>
+      </Tabs>
+    </Flex>
   );
 }
 
