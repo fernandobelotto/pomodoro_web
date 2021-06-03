@@ -1,4 +1,4 @@
-# Simple pomodoro web made
+# Simple pomodoro web app
 
 ## made with React and Chakra UI
 
